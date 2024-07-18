@@ -2,32 +2,16 @@ import React from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import Profile from "@/components/Profile";
-import Skills from "@/components/Skills";
-import Works from "@/components/works";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
-export default function Home() {
+export default function Page1() {
   return (
     <div>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:url" content="https://iidaaa.secret.jp/portfolio/" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="飯田のポートフォリオ" />
-        <meta
-          property="og:description"
-          content="トライデントコンピュータ専門学校の学生、飯田智成のポートフォリオです。"
-        />
-        <meta property="og:site_name" content="名古屋　学生　ポートフォリオ" />
-        <meta
-          property="og:image"
-          content="https://iidaaa.secret.jp/portfolio/thumbnail.JPG"
-        />
-        <title>iida Portfolio</title>
-        <link rel="icon" href="/image/favicon.ico" />
+        <title>Portfolio</title>
         <link
           rel="stylesheet"
           href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
@@ -48,10 +32,15 @@ export default function Home() {
       <Navbar />
       <main className="main">
         <div className="main__inner">
-          <Profile />
-          <Skills />
-          <Works />
-          <Contact />
+          <article className="work">
+            <h2 className="work__work">WORK</h2>
+            <p className="work__user">My Work</p>
+            <div className="work__itemlist">
+              <p className="work__item"></p>
+              <p className="work__item"></p>
+              <p className="work__item"></p>
+            </div>
+          </article>
         </div>
       </main>
       <Footer />
